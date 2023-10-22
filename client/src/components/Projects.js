@@ -1,9 +1,10 @@
 import Spinner from "./Spinner";
 import ProjectCard from "./ProjectCard";
 import { useQuery } from "@apollo/client";
-import { GET_PROJECTS } from "../queries/ProjectQueries"
+import { GET_PROJECTS } from "../queries/ProjectQueries";
 
-const Project = () => {
+
+const Projects = () => {
   const { loading, error, data } = useQuery(GET_PROJECTS);
 
   if (loading) return <Spinner />;
@@ -23,4 +24,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default Projects;
